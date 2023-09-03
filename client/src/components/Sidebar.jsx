@@ -4,16 +4,7 @@ import ambulance from "../assets/icons/ambulance.svg";
 import drivers from "../assets/icons/drivers.svg";
 import help from "../assets/icons/help.svg";
 import logout from "../assets/icons/logout.svg";
-
-import {
-  FaTh,
-  FaBars,
-  FaUserAlt,
-  FaRegChartBar,
-  FaCommentAlt,
-  FaShoppingBag,
-  FaThList,
-} from "react-icons/fa";
+import logo from "../assets/icons/logo.svg";
 import { NavLink } from "react-router-dom";
 
 const Sidebar = ({ children }) => {
@@ -26,7 +17,7 @@ const Sidebar = ({ children }) => {
       icon: <img src={home} alt="" />,
     },
     {
-      path: "/am",
+      path: "/ambulance",
       name: "Ambulance",
       icon: <img src={ambulance} alt="" />,
     },
@@ -57,7 +48,7 @@ const Sidebar = ({ children }) => {
             LifeSaver
           </h1>
           <div style={{ marginLeft: isOpen ? "50px" : "0px" }} className="bars">
-            <FaBars onClick={toggle} />
+            <img src={logo} alt="" onClick={toggle} />
           </div>
         </div>
         {menuItem.map((item, index) => (
